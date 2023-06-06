@@ -30,7 +30,7 @@ public class DriverManagerConnector {
      */
     public static void main(String[] args) {
         log.trace("Connecting ... (legacy)");
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);) {
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             DatabaseMetaData dmd = conn.getMetaData();
 
             String db = dmd.getDatabaseProductName();
